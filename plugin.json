@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "interfaze",
+  "version": "0.1.0",
+  "description": "Interfaze tools for AI agents through the hosted Interfaze MCP server: web search, web scraping, OCR for images, PDFs and Word documents, speech-to-text, object and GUI detection, translation, classification and time-series forecasting. Includes skills that tell the agent which tool to use.",
+  "author": {
+    "name": "Interfaze",
+    "url": "https://interfaze.ai"
+  },
+  "homepage": "https://interfaze.ai",
+  "repository": "https://github.com/InterfazeAI/interfaze-agent-plugin",
+  "license": "MIT",
+  "keywords": [
+    "interfaze",
+    "mcp",
+    "ocr",
+    "speech-to-text",
+    "web-search",
+    "web-scraping",
+    "object-detection",
+    "translation",
+    "forecasting",
+    "hermes",
+    "openclaw"
+  ],
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "servers": {
+        "interfaze": {
+          "trust": "untrusted"
+        }
+      }
+    }
+  }
+}
