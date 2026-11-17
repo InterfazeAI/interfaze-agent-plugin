@@ -1,5 +1,7 @@
 # Interfaze plugin for AI agents
 
+**Accurate, verifiable output in one call.** [Interfaze](https://interfaze.ai) is a model built for deterministic tasks such as OCR, audio understanding and structured data extraction. It gives one model you can trust instead of a pipeline of OCR tools, speech APIs, classifiers and glue code.
+
 This plugin connects an AI agent to the hosted [Interfaze](https://interfaze.ai) MCP server. It also adds skills that tell the agent which Interfaze tool to use. It is an [Agent Plugins](https://agent-plugins.org) 1.0.0 package. The package has a manifest, an MCP connection and Markdown skills. It has no local code and no runtime dependencies.
 
 It works with [Hermes Agent](https://hermes-agent.nousresearch.com) and [OpenClaw](https://openclaw.ai).

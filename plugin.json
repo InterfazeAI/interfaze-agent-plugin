@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "interfaze",
   "version": "0.1.0",
-  "description": "Interfaze tools for AI agents through the hosted Interfaze MCP server: web search, web scraping, OCR for images, PDFs and Word documents, speech-to-text, object and GUI detection, translation, classification and time-series forecasting. Includes skills that tell the agent which tool to use.",
+  "description": "Accurate, verifiable output in one call. Interfaze is a model built for deterministic tasks: OCR for images, PDFs and Word documents, speech-to-text, object and GUI detection with bounding boxes, web search and scraping, translation, classification and forecasting, in 100+ languages. This plugin connects your agent to the hosted Interfaze MCP server and adds skills that pick the right tool for each job.",
   "author": {
     "name": "Interfaze",
     "url": "https://interfaze.ai"

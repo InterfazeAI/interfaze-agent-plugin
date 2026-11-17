@@ -6,7 +6,8 @@ title: Interfaze
 repo: https://github.com/InterfazeAI/interfaze-agent-plugin
 sha: <sha>
 description: >-
-  Web search, web scraping, OCR for images, PDFs and Word documents, speech-to-text,
+  Interfaze, a model built for deterministic tasks, with accurate and verifiable output in
+  one call: web search, web scraping, OCR for images, PDFs and Word documents, speech-to-text,
   object and GUI detection, translation, classification and time-series forecasting
   through the hosted Interfaze MCP server (Streamable HTTP, API key), with seven
   skills bundled. Portable Agent Plugins v1 package (plugin.json + mcp.json + skills/).
