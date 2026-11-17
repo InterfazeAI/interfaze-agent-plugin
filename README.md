@@ -4,7 +4,7 @@
 
 This plugin connects an AI agent to the hosted [Interfaze](https://interfaze.ai) MCP server. It also adds skills that tell the agent which Interfaze tool to use. It is an [Agent Plugins](https://agent-plugins.org) 1.0.0 package. The package has a manifest, an MCP connection and Markdown skills. It has no local code and no runtime dependencies.
 
-It works with [Hermes Agent](https://hermes-agent.nousresearch.com) and [OpenClaw](https://openclaw.ai).
+It works with [Hermes Agent](https://hermes-agent.nousresearch.com), [OpenClaw](https://openclaw.ai) and [Claude Code](https://code.claude.com).
 
 ## What's included
 
@@ -88,6 +88,27 @@ The plugin marks the `interfaze` server as `trust: untrusted`. Hermes runs the r
    ```
 
 OpenClaw names the tools `interfaze__<tool>`, for example `interfaze__ocr`.
+
+## Claude Code
+
+1. Add this repository as a plugin marketplace, then install the plugin:
+
+   ```text
+   /plugin marketplace add InterfazeAI/interfaze-agent-plugin
+   /plugin install interfaze@interfaze
+   ```
+
+2. Set `INTERFAZE_API_KEY` in the environment that starts Claude Code. Claude Code reads `${INTERFAZE_API_KEY}` in `.mcp.json` from that environment.
+3. Start a new session.
+
+## Package layout
+
+The repository has two manifests for the same skills and server:
+
+- `plugin.json` and `mcp.json`: the Agent Plugins 1.0.0 package. Hermes Agent reads these files.
+- `.claude-plugin/plugin.json` and `.mcp.json`: the Claude plugin format. Claude Code and ClawHub read these files. OpenClaw also uses this format when both manifests are present.
+
+Keep the two manifests in sync when you change the version, the description or the server.
 
 ## Local files
 

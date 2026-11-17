@@ -70,3 +70,17 @@ jobs:
               jsonschema.validate(json.load(open(doc)), json.load(open(schema)))
               print(f"{doc}: valid")
           EOF
+      - name: Check that the Agent Plugins and Claude manifests match
+        run: |
+          python - <<'EOF'
+          import json
+          a, c = json.load(open("plugin.json")), json.load(open(".claude-plugin/plugin.json"))
+          for key in ("name", "version", "description", "license"):
+              assert a[key] == c[key], f"plugin.json and .claude-plugin/plugin.json differ on {key}"
+          m, cm = json.load(open("mcp.json"))["mcpServers"], json.load(open(".mcp.json"))["mcpServers"]
+          assert m.keys() == cm.keys(), "mcp.json and .mcp.json declare different servers"
+          for name in m:
+              for key in ("url", "headers"):
+                  assert m[name][key] == cm[name][key], f"{name}.{key} differs between mcp.json and .mcp.json"
+          print("manifests match")
+          EOF

@@ -18,6 +18,10 @@ Use the `web_search` tool to find current information on the web.
 2. Read the results. Answer the user's question from the results.
 3. Give the source URL for each fact that you use.
 
+## Read the result
+
+The result is a list. Each item has `title`, `url`, `description`, `snippets` and `content`. `content` is the full text of the page, so the result can be several hundred KB. Read `title`, `url` and `snippets` first. Read `content` only when the snippets do not answer the question.
+
 ## Tips
 
 - If the results do not answer the question, change the query once. Do not repeat the same query.

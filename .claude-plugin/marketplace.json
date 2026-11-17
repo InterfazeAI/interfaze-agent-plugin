@@ -1,0 +1,15 @@
+{
+  "name": "interfaze",
+  "description": "Interfaze plugin for Claude Code: the hosted Interfaze MCP server plus skills.",
+  "owner": {
+    "name": "Interfaze",
+    "url": "https://interfaze.ai"
+  },
+  "plugins": [
+    {
+      "name": "interfaze",
+      "source": "./",
+      "description": "OCR, speech-to-text, object and GUI detection, web search and scraping, translation, classification and forecasting through the hosted Interfaze MCP server."
+    }
+  ]
+}
