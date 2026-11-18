@@ -1,6 +1,6 @@
 # Draft of plugin-catalog/interfaze.yaml for the PR to NousResearch/hermes-agent.
-# Before the PR: replace <sha> with the full 40-character commit, add image and
-# screenshots after the assets exist, and run `hermes plugins validate` at that commit.
+# Before the PR: replace every <sha> with the full 40-character commit and run
+# `hermes plugins validate` at that commit.
 name: interfaze
 title: Interfaze
 repo: https://github.com/InterfazeAI/interfaze-agent-plugin
@@ -27,6 +27,7 @@ category: web
 requires_hermes: ">=0.22.2"
 version: "0.1.0"
 docs_url: https://github.com/InterfazeAI/interfaze-agent-plugin/blob/<sha>/README.md
+image: https://raw.githubusercontent.com/InterfazeAI/interfaze-agent-plugin/<sha>/assets/banner.png
 platforms: []
 capabilities:
   provides_tools: []
