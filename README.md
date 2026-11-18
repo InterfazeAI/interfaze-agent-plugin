@@ -71,19 +71,41 @@ The plugin marks the `interfaze` server as `trust: untrusted`. Hermes runs the r
 
 ## OpenClaw
 
-1. Install the plugin from GitHub:
+We tested these steps with OpenClaw 2026.11.5.
+
+1. Install the plugin from this repository:
 
    ```bash
-   openclaw plugins install git:github.com/InterfazeAI/interfaze-agent-plugin@main
+   openclaw plugins install interfaze --marketplace InterfazeAI/interfaze-agent-plugin
    ```
 
-2. Add `INTERFAZE_API_KEY` to the environment of the OpenClaw Gateway service. OpenClaw reads `${INTERFAZE_API_KEY}` in `.mcp.json` from that environment. A variable that you set only in an interactive shell does not reach a Gateway that runs as a service.
-3. Restart the Gateway and start a new session.
-4. Check the install:
+   OpenClaw asks you to trust the source and to accept the plugin capabilities. In a script, add `--force --accept-capabilities`.
+
+2. Add the key to `~/.openclaw/.env`:
 
    ```bash
-   openclaw plugins inspect interfaze
+   INTERFAZE_API_KEY=<your-key>
    ```
+
+   The Gateway reads this file when it starts. A variable that you set only in an interactive shell does not reach a Gateway that runs as a service.
+
+3. Add the Interfaze server to the OpenClaw configuration:
+
+   ```bash
+   openclaw mcp set interfaze '{"url":"https://api.interfaze.ai/mcp","transport":"streamable-http","headers":{"Authorization":"Bearer ${INTERFAZE_API_KEY}"}}'
+   ```
+
+   OpenClaw does not replace `${INTERFAZE_API_KEY}` in the header of the plugin's `.mcp.json`, so the server rejects that connection. This entry replaces it. OpenClaw reads the key from the environment when it loads the configuration, and does not store the key in the configuration file.
+
+4. Stop the Gateway, then check the connection:
+
+   ```bash
+   openclaw mcp probe interfaze
+   ```
+
+   The output shows `interfaze: 11 tools`.
+
+5. Start the Gateway and start a new session.
 
 OpenClaw names the tools `interfaze__<tool>`, for example `interfaze__ocr`.
 
