@@ -37,13 +37,13 @@ Get a key from the dashboard at [interfaze.ai](https://interfaze.ai). Keep the k
 
 Requires Hermes Agent 0.22.2 or later.
 
-1. Install the plugin:
+1. Install the plugin from the Hermes plugin catalog:
 
    ```bash
    hermes plugins install interfaze
    ```
 
-   To install from this repository instead of the catalog:
+   This command works after the catalog lists the plugin. Until then, install from this repository:
 
    ```bash
    hermes plugins install InterfazeAI/interfaze-agent-plugin --no-enable
@@ -77,9 +77,7 @@ The plugin marks the `interfaze` server as `trust: untrusted`. Hermes runs the r
    openclaw plugins install git:github.com/InterfazeAI/interfaze-agent-plugin@main
    ```
 
-   A ClawHub listing is not available yet. The ClawHub CLI (v0.26.0) does not publish packages in the Agent Plugins format.
-
-2. Add `INTERFAZE_API_KEY` to the environment of the OpenClaw Gateway service. OpenClaw reads `${INTERFAZE_API_KEY}` in `mcp.json` from that environment. A variable that you set only in an interactive shell does not reach a Gateway that runs as a service.
+2. Add `INTERFAZE_API_KEY` to the environment of the OpenClaw Gateway service. OpenClaw reads `${INTERFAZE_API_KEY}` in `.mcp.json` from that environment. A variable that you set only in an interactive shell does not reach a Gateway that runs as a service.
 3. Restart the Gateway and start a new session.
 4. Check the install:
 
