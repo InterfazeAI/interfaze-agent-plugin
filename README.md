@@ -74,7 +74,7 @@ The plugin and the keyless entry mark the server `trust: untrusted`, so Hermes r
 1. Install the plugin from ClawHub:
 
    ```bash
-   openclaw plugins install interfaze
+   openclaw plugins install clawhub:@interfaze/interfaze
    ```
 
 2. If you use a key, add it to `~/.openclaw/.env`. A Gateway that runs as a service does not see a variable that you set only in your shell.
