@@ -77,6 +77,8 @@ The plugin and the keyless entry mark the server `trust: untrusted`, so Hermes r
    openclaw plugins install clawhub:@interfaze/interfaze
    ```
 
+   OpenClaw shows the ClawHub security audit, then asks you to approve the install and accept the plugin's capabilities. In a script or without a terminal, add `--accept-capabilities`.
+
 2. If you use a key, add it to `~/.openclaw/.env`. A Gateway that runs as a service does not see a variable that you set only in your shell.
 
    ```bash
