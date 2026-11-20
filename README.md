@@ -8,6 +8,8 @@ This plugin connects an AI agent to the hosted Interfaze MCP server and adds ski
 
 Interfaze is free to try without a key. For more calls, get a free API key from the dashboard at [interfaze.ai](https://interfaze.ai).
 
+If you encounter an issue, please contact support at [support@interfaze.ai](mailto:support@interfaze.ai).
+
 ## Tools
 
 | Tool | Description |

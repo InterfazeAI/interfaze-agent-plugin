@@ -1,7 +1,7 @@
 {
   "name": "interfaze",
   "displayName": "Interfaze",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Accurate, verifiable output in one call. Interfaze is a model built for deterministic tasks: OCR for images, PDFs and Word documents, speech-to-text, object and GUI detection with bounding boxes, web search and scraping, translation, classification and forecasting, in 100+ languages. This plugin connects your agent to the hosted Interfaze MCP server and adds skills that pick the right tool for each job.",
   "author": {
     "name": "Interfaze",
