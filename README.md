@@ -1,3 +1,5 @@
+<img src="assets/banner.png" alt="Interfaze: the frontier model for deterministic tasks. OCR, STT, Classify, Object detection" width="100%">
+
 # Interfaze plugin for AI agents
 
 **Accurate, verifiable output in one call.** [Interfaze](https://interfaze.ai) is a model built for deterministic tasks such as OCR, audio understanding and structured data extraction. It gives one model you can trust instead of a pipeline of OCR tools, speech APIs, classifiers and glue code.
