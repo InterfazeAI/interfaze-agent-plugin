@@ -73,14 +73,18 @@ jobs:
       - name: Check that the Agent Plugins and Claude manifests match
         run: |
           python - <<'EOF'
-          import json
+          import json, re
+          # .mcp.json writes ${VAR:-} so that Claude Code sends no key when VAR is unset (keyless access).
+          # Hermes does not support that form, so mcp.json keeps ${VAR}. Compare the two after this change.
+          def norm(headers):
+              return {k: re.sub(r"\$\{(\w+):-\}", r"${\1}", v) for k, v in headers.items()}
           a, c = json.load(open("plugin.json")), json.load(open(".claude-plugin/plugin.json"))
           for key in ("name", "version", "description", "license"):
               assert a[key] == c[key], f"plugin.json and .claude-plugin/plugin.json differ on {key}"
           m, cm = json.load(open("mcp.json"))["mcpServers"], json.load(open(".mcp.json"))["mcpServers"]
           assert m.keys() == cm.keys(), "mcp.json and .mcp.json declare different servers"
           for name in m:
-              for key in ("url", "headers"):
-                  assert m[name][key] == cm[name][key], f"{name}.{key} differs between mcp.json and .mcp.json"
+              assert m[name]["url"] == cm[name]["url"], f"{name}.url differs between mcp.json and .mcp.json"
+              assert m[name]["headers"] == norm(cm[name]["headers"]), f"{name}.headers differs between mcp.json and .mcp.json"
           print("manifests match")
           EOF

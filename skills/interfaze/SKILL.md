@@ -48,6 +48,8 @@ Each task tool returns a JSON object with `name` and `result`. When the task mad
 
 If `result` contains `error`, the task failed. Tell the user the error text. Do not present the error as data.
 
-## Costs
+## Costs and limits
 
-Each call uses credits on the user's Interfaze account. Do not call a tool again with the same input when you already have the result.
+With a key, each call uses credits on the user's Interfaze account. Without a key, calls are keyless: they use no credits, but Interfaze limits them for each IP address. Do not call a tool again with the same input when you already have the result.
+
+If a tool returns a keyless limit error, follow "Read connection errors" in the `get-started` skill.
