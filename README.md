@@ -26,7 +26,7 @@ Interfaze is free to try without a key. For more calls, get a free API key from 
 
 ## Hermes Agent
 
-Requires Hermes Agent 0.22.2 or later.
+Requires Hermes Agent 0.22.6 or later.
 
 1. Install the plugin from the Hermes plugin catalog:
 

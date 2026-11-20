@@ -18,10 +18,12 @@ jobs:
       fail-fast: false
       matrix:
         hermes:
-          - name: v0.22.2
-            sha: d923a5eb487a17c0a68801bba9ef0f56c81040a8
+          - name: v0.22.6
+            sha: f0d94882e89ab8d4098b5bb2f166adfb9ee0a0ab
           - name: v0.23.2
             sha: ae2a81ccc00e9b7c06301523e5bb09608397149c
+          - name: v0.23.3
+            sha: caafe5389ae585ef77387a962aee05b1bcf17029
     steps:
       - uses: actions/checkout@v4
         with:
