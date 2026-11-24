@@ -4,11 +4,11 @@
 
 **Accurate, verifiable output in one call.** [Interfaze](https://interfaze.ai) is a model built for deterministic tasks such as OCR, audio understanding and structured data extraction. It gives one model you can trust instead of a pipeline of OCR tools, speech APIs, classifiers and glue code.
 
-This plugin connects an AI agent to the hosted Interfaze MCP server and adds skills that tell the agent which tool to use. It is an [Agent Plugins](https://agent-plugins.org) 1.0.0 package with no local code. It works with [Hermes Agent](https://hermes-agent.nousresearch.com), [OpenClaw](https://openclaw.ai) and [Claude Code](https://code.claude.com).
+This plugin connects an AI agent to the hosted [Interfaze MCP server](https://interfaze.ai/docs/integrations/mcp-server) and adds skills that tell the agent which tool to use. It is an [Agent Plugins](https://agent-plugins.org) 1.0.0 package with no local code. It works with [Hermes Agent](https://hermes-agent.nousresearch.com), [OpenClaw](https://openclaw.ai) and [Claude Code](https://code.claude.com).
 
 Interfaze is free to try without a key. For more calls, get a free API key from the dashboard at [interfaze.ai](https://interfaze.ai).
 
-If you encounter an issue, please contact support at [support@interfaze.ai](mailto:support@interfaze.ai).
+To learn more about Interfaze, read the [Interfaze docs](https://interfaze.ai/docs). If you encounter an issue, please contact support at [support@interfaze.ai](mailto:support@interfaze.ai).
 
 ## Tools
 

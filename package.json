@@ -1,0 +1,9 @@
+{
+  "name": "@interfaze/interfaze",
+  "version": "0.1.3",
+  "type": "module",
+  "private": true,
+  "description": "Interfaze MCP server and skills for OpenClaw, Hermes Agent and Claude Code.",
+  "license": "MIT",
+  "repository": "https://github.com/InterfazeAI/interfaze-agent-plugin"
+}

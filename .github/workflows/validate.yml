@@ -83,6 +83,10 @@ jobs:
           a, c = json.load(open("plugin.json")), json.load(open(".claude-plugin/plugin.json"))
           for key in ("name", "version", "description", "license"):
               assert a[key] == c[key], f"plugin.json and .claude-plugin/plugin.json differ on {key}"
+          # package.json exists for ClawHub's package metadata check. Keep its version in step.
+          p = json.load(open("package.json"))
+          assert p["version"] == a["version"], "package.json and plugin.json differ on version"
+          assert p["name"] == "@interfaze/interfaze", "package.json name must match the ClawHub package"
           m, cm = json.load(open("mcp.json"))["mcpServers"], json.load(open(".mcp.json"))["mcpServers"]
           assert m.keys() == cm.keys(), "mcp.json and .mcp.json declare different servers"
           for name in m:
